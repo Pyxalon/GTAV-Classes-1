@@ -41,6 +41,10 @@ namespace rage
         class CNetGamePlayer* m_unk_net_player_list[10]; //0x00E0
         char pad_0090[4]; //0x0130
         uint64_t pad_0098; //0x0138
+        bool IsPhysical() const
+        {
+          return m_player_type == 0;
+        }
     };
     static_assert(sizeof(netPlayer) == 0x140);
 #pragma pack(pop)
